@@ -12,7 +12,7 @@ const Formulario = () => {
 
             <View style={styles.container}>
                 <Text style={styles.campoTexto}>
-                    Nome
+                    Nome 
                 </Text>
                 <TextInput
                     style={styles.campo}
