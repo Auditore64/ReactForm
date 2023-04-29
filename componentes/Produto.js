@@ -3,6 +3,7 @@ import { Button, Text, View, StyleSheet, Image, } from "react-native";
 
 
 class Produto extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -12,27 +13,12 @@ class Produto extends React.Component {
             adicionado: false //ele é uma propriedade
         };
     }
-
     /*
     this diz que vamos acessar um dado interno da propriedade
     state guarda o estado interno do componente / é um objeto
     essa funcao possui o this
     addProduto é um método
     */
-
-    // remover item que nao funcionou
-
-    /*
-    removeProduto() {
-        this.setState({
-            qtd: this.setState.qtd - 1,
-            total: this.setState.total - this.props.p.preco
-        })
-        this.props.valorFinal(this.props.p.preco);
-    }
-    */
-
-
     addProduto() {
         this.setState({
             qtd: this.state.qtd + 1,
@@ -86,19 +72,8 @@ class Produto extends React.Component {
                         //title={this.state.adicionado ? 'Adicionado' : 'Adicionar'}
                         />
 
-                        {/*
-                        <Button
-                            style={styles.botao}
-                            onPress={this.removeProduto.bind(this)}
-                            title={'Remover'}
-
-                        />
-                        */}
-
                     </View>
                 </View>
-
-
             </View>
         );
     }
