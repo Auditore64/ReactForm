@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View, VirtualizedList } from "react-native";
+import { Button, Image, StyleSheet, Text, View, VirtualizedList } from "react-native";
 
 /*lembrar sempre de colocar o navigation aqui dentro da arrow function
 com chaves
@@ -7,40 +7,16 @@ com chaves
 const Tela1 = ({ navigation }) => {
     return (
         <View style={styles.container}>
-
             <Text style={styles.texto}>
                 Você está na Tela 1
             </Text>
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Home"
-                    onPress={() =>
-                        navigation.navigate('TelaHome', { name: 'Tela Home' })
-                    }
-                />
-            </View>
-
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela2"
-                    onPress={() =>
-                        navigation.navigate('Tela2', { name: 'Tela 2' })
-                    }
-                />
-
-            </View>
-
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela3"
-                    onPress={() =>
-                        navigation.navigate('Tela3', { name: 'Tela 3' })
-                    }
-                />
-            </View>
+            <Text style={styles.texto}>
+                Este é Stan Marsh
+            </Text>
+            <Image 
+            style={styles.imagens}
+            source={require('../componentes/images/StanMarsh.webp')}
+            />
         </View>
     )
 }
@@ -48,7 +24,7 @@ const styles = StyleSheet.create({
     container: {
         display: "flex",
         flex: 1,
-        backgroundColor: "lightpink",
+        backgroundColor: "lightcyan"
     },
     separador: {
         marginBottom: 30,
@@ -59,6 +35,12 @@ const styles = StyleSheet.create({
         fontSize: 30,
         marginBottom: 15,
         alignSelf: "center",
+    },
+    imagens: {
+        marginTop: 20,
+        alignSelf: "center",
+        width: 329,
+        height: 510,
     }
 });
 

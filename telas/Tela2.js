@@ -1,41 +1,19 @@
 
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, Image, StyleSheet, Text, View } from "react-native";
 
-const Tela2 = ({navigation}) => {
+const Tela2 = ({ navigation }) => {
     return (
         <View style={styles.container}>
-              <Text style={styles.texto}>
+            <Text style={styles.texto}>
                 Você está na Tela 2
             </Text>
+            <Text style={styles.texto}>
+                Este é Eric Cartman
+            </Text>
+            <Image style={styles.imagens}
+                source={require('../componentes/images/EricCartman.webp')}
+            />
 
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Home"
-                    onPress={() =>
-                        navigation.navigate('TelaHome', { name: 'Tela Home' })
-                    }
-                />
-            </View>
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela 1"
-                    onPress={() =>
-                        navigation.navigate('Tela1', { name: 'Tela 1' })
-                    }
-                />
-            </View>
-
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela 3"
-                    onPress={() =>
-                        navigation.navigate('Tela3', { name: 'Tela 3' })
-                    }
-                />
-            </View>
         </View>
     )
 }
@@ -50,12 +28,18 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 30,
         marginBottom: 15,
-        alignSelf:"center",
+        alignSelf: "center",
     },
     separador: {
-        alignSelf:"center",
+        alignSelf: "center",
         marginBottom: 20,
     },
+    imagens: {
+        marginTop: 20,
+        alignSelf: "center",
+        width: 329,
+        height: 302,
+    }
 });
 
 export default Tela2;

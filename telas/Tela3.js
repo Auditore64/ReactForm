@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, Image, StyleSheet, Text, View } from "react-native";
 
 const Tela3 = ({ navigation }) => {
     return (
@@ -6,36 +6,15 @@ const Tela3 = ({ navigation }) => {
               <Text style={styles.texto}>
                 Você está na Tela 3
             </Text>
+            <Text style={styles.texto}>
+                Este é Kyle Broflovski
+            </Text>
+<Image 
+style={styles.imagens}
+source={require('../componentes/images/KyleBroflovski.webp')}
 
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Home"
-                    onPress={() =>
-                        navigation.navigate('TelaHome', { name: 'Tela Home' })
-                    }
-                />
-            </View>
-
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela 1"
-                    onPress={() =>
-                        navigation.navigate('Tela1', { name: 'Tela 1' })
-                    }
-                />
-            </View>
-
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela 2"
-                    onPress={() =>
-                        navigation.navigate('Tela2', { name: 'Tela 2' })
-                    }
-                />
-            </View>
+/>
+          
 
         </View>
     )
@@ -46,7 +25,7 @@ const styles = StyleSheet.create({
     container: {
         display: "flex",
         flex: 1,
-        backgroundColor: "lightgreen",
+        backgroundColor: "lightgray",
     },
     texto: {
         color: 'black',
@@ -58,6 +37,12 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         alignSelf: "center"
     },
+    imagens: {
+        marginTop: 20,
+        alignSelf: "center",
+        width: 329,
+        height: 400,
+    }
 });
 
 

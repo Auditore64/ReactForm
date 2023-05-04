@@ -32,13 +32,39 @@ function Settings() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={TelaHome} />
-        <Tab.Screen name="Tela1" component={Tela1} />
-        <Tab.Screen name="Tela2" component={Tela2} />
-        <Tab.Screen name="Tela3" component={Tela3} />
+      {/*
+      todo o codigo  precisa ficar dentro do contâiner de navegação
+      (navigation container)
+      */}
+      <Stack.Navigator>
+        {/*definindo as telas que poderão ser navegadas 
+        todas as telas que forem ser navegadas 
+        precisam ser colocadas aqui
+        dentro do stack navigator que fica dentro do navigation conttainer
+        */}
+        <Stack.Screen
+          name="TelaHome"
+          component={TelaHome}
+          options={{ title: 'Tela Principal' }}
+        />
 
-      </Tab.Navigator>
+        <Stack.Screen
+          name="Tela1"
+          component={Tela1}
+          options={{ title: 'Tela 1' }}
+        />
+        <Stack.Screen
+          name="Tela2"
+          component={Tela2}
+          options={{ title: 'Tela 2' }}
+        />
+        <Stack.Screen
+          name="Tela3"
+          component={Tela3}
+          options={{ title: 'Tela 3' }}
+        />
+
+      </Stack.Navigator> 
     </NavigationContainer>
   );
 }

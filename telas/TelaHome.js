@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, Image, StyleSheet, Text, View } from "react-native";
 /*
 
 aqui fica o codigo normal da pagina que será exibido
@@ -7,42 +7,14 @@ const TelaHome = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.texto}>
-                HOME
-            </Text>
-
-            <Text style={styles.texto}>
                 Você está na tela principal
             </Text>
-
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela1"
-                    onPress={() =>
-                        navigation.navigate('Tela1', { name: 'Tela 1' })
-                    }
-                />
-            </View>
-
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela2"
-                    onPress={() =>
-                        navigation.navigate('Tela2', { name: 'Tela 2' })
-                    }
-                />
-            </View>
-            <View style={styles.separador}>
-                <Button
-                    color={'green'}
-                    title="Tela3"
-                    onPress={() =>
-                        navigation.navigate('Tela3', { name: 'Tela 3' })
-                    }
-                />
-            </View>
-
+            <Text style={styles.texto}>
+                Este é Kenny McCormick
+            </Text>
+           <Image style={styles.imagens}
+           source={require('../componentes/images/KennyMcCormick.webp')}
+           />
         </View >
     );
 }
@@ -63,6 +35,12 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         alignSelf: "center"
     },
+    imagens: {
+        marginTop: 20,
+        alignSelf: "center",
+        width: 333,
+        height: 451,
+    }
 });
 
 export default TelaHome;
